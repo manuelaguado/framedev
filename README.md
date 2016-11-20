@@ -1,4 +1,4 @@
-<p align="center"><img src="https://dl.dropboxusercontent.com/u/345760/framedev.png"></p><br><br>
+<p align="center"><img width="450" src="https://dl.dropboxusercontent.com/u/345760/framedev.png"></p><br><br>
 ## Acerca de FRAMEDEV
 
 FRAMEDEV es un marco de trabajo escrito en PHP que permite el rápido desarrollo de aplicaciones que requieren caracteristicas basicas preimplementadas como lo son:
@@ -16,7 +16,7 @@ FRAMEDEV es un marco de trabajo escrito en PHP que permite el rápido desarrollo
 - Tiempo de sesión por inactividad
 - Aceptar / Rechazar Términos y condiciones para continuar usando una cuenta
 - Bloqueo de cuenta por inactividad
-- [Debugger] (https://github.com/barbushin/php-console)
+- [Debugger] (https://github.com/barbushin/php-console) PHP-Console
 - Escrito en PHP7
 - Templates para correos
 - Templates para PDF
@@ -24,11 +24,12 @@ FRAMEDEV es un marco de trabajo escrito en PHP que permite el rápido desarrollo
 - Frontend Web
 
 
-##Instalar
+##Instalar librerias PHP para manejo de imágenes y 
+
         -apt-get install php7.0-xml
         -apt-get install php7.0-gd
 
-editar:
+##Configuración de MySQL
 
         -nano /etc/mysql/mysql.conf.d/mysqld.cnf
 
