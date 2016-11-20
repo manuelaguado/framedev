@@ -1,2 +1,5 @@
 vendor/
-
+uploads/perfiles/
+temp/
+public/tmp/
+public/plugs/cache/
