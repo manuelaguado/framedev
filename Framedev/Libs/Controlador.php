@@ -184,17 +184,19 @@ class Controlador extends Controller
 	protected function duplicatePublic($imagen){
 		$token = $this->token();
 		$destino = $token.$imagen;
+		
 		$tmp = '../public/tmp/';
 		$files = scandir($tmp);
 		foreach($files as $file){
-			if (is_file($tmp.$file)) {
+			if ((is_file($tmp.$file))&&($file != '.gitkeep')) {
 				unlink($tmp.$file);
 			}
 		}
+		
 		$cache = '../public/plugs/cache/';
 		$filesc = scandir($cache);
 		foreach($filesc as $filec){
-			if (is_file($cache.$filec)) {
+			if ((is_file($cache.$filec))&&($file != '.gitkeep')) {
 				unlink($cache.$filec);
 			}
 		}
