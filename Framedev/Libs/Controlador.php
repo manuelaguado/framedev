@@ -196,7 +196,7 @@ class Controlador extends Controller
 		$cache = '../public/plugs/cache/';
 		$filesc = scandir($cache);
 		foreach($filesc as $filec){
-			if ((is_file($cache.$filec))&&($file != '.gitkeep')) {
+			if ((is_file($cache.$filec))&&($filec != '.gitkeep')) {
 				unlink($cache.$filec);
 			}
 		}
