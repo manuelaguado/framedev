@@ -1,4 +1,4 @@
-<p align="center"><img width="200"src="https://dl.dropboxusercontent.com/u/345760/framedev.png"></p><br><br>
+<p align="center"><img src="https://dl.dropboxusercontent.com/u/345760/framedev.png"></p><br><br>
 ## Acerca de FRAMEDEV
 
 FRAMEDEV es un marco de trabajo escrito en PHP que permite el rápido desarrollo de aplicaciones que requieren caracteristicas basicas preimplementadas como lo son:
