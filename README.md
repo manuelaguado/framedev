@@ -24,7 +24,7 @@ FRAMEDEV es un marco de trabajo escrito en PHP que permite el rápido desarrollo
 - Frontend Web
 
 
-##Instalar librerias PHP para manejo de imágenes y 
+##Instalar librerias PHP para manejo de imágenes y librería xml
 
         -apt-get install php7.0-xml
         -apt-get install php7.0-gd
