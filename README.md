@@ -72,3 +72,10 @@ Para mail via PEAR Mail:
             sudo pear install mail
             sudo pear install Net_SMTP
             sudo pear install mail_mime
+			
+##Permisos para carpetas
+
+		- chmod -R 755 public/tmp/
+		- chmod -R 755 public/plugs/cache/
+
+		
