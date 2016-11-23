@@ -6,7 +6,7 @@
                 <div class="col-md-8 col-sm-8">
                     <ul class="pull-right breadcrumb">
                         <li>
-                            <a href="index.html">
+                            <a href="javascript:;" data-file="index" data-folder="index" class="load-content">
                                 Home
                             </a>
                         </li>
@@ -52,7 +52,7 @@
                                     <div class="col-md-7">
                                         <div class="post-content">
                                             <h2>
-                                                <a href="blog_post.html">
+                                                <a href="javascript:;" data-file="post" data-folder="blog" class="load-content">
                                                     Euismod atras vulputate iltricies etri elit
                                                 </a>
                                             </h2>
@@ -88,7 +88,7 @@
                                                     36 Comments
                                                 </a>
                                             </span>
-                                            <a class="btn btn-xs btn-main-color pull-right" href="blog_post.html">
+                                            <a href="javascript:;" data-file="post" data-folder="blog" class="btn btn-xs btn-main-color pull-right load-content">
                                                 Read more...
                                             </a>
                                         </div>
@@ -114,7 +114,7 @@
                                     <div class="col-md-7">
                                         <div class="post-content">
                                             <h2>
-                                                <a href="blog_post.html">
+                                                <a href="javascript:;" data-file="post" data-folder="blog" class="load-content">
                                                     Euismod atras vulputate iltricies etri elit
                                                 </a>
                                             </h2>
@@ -149,7 +149,7 @@
                                                     36 Comments
                                                 </a>
                                             </span>
-                                            <a class="btn btn-xs btn-main-color pull-right" href="blog_post.html">
+                                            <a href="javascript:;" data-file="post" data-folder="blog" class="btn btn-xs btn-main-color pull-right load-content">
                                                 Read more...
                                             </a>
                                         </div>
@@ -175,7 +175,7 @@
                                     <div class="col-md-7">
                                         <div class="post-content">
                                             <h2>
-                                                <a href="blog_post.html">
+                                                <a href="javascript:;" data-file="post" data-folder="blog" class="load-content">
                                                     Euismod atras vulputate iltricies etri elit
                                                 </a>
                                             </h2>
@@ -211,7 +211,7 @@
                                                     36 Comments
                                                 </a>
                                             </span>
-                                            <a class="btn btn-xs btn-main-color pull-right" href="blog_post.html">
+                                            <a href="javascript:;" data-file="post" data-folder="blog" class="btn btn-xs btn-main-color pull-right load-content">
                                                 Read more...
                                             </a>
                                         </div>

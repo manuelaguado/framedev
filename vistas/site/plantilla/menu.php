@@ -180,21 +180,6 @@
                     </a>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a href="javascript:;" data-file="example1" data-folder="portfolio" class="load-content">
-                                4 Columns Portfolio
-                            </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;" data-file="example2" data-folder="portfolio" class="load-content">
-                                3 Columns Portfolio
-                            </a>
-                                </li>
-                                <li>
-                                    <a href="javascript:;" data-file="example3" data-folder="portfolio" class="load-content">
-                                2 Columns Portfolio
-                            </a>
-                                </li>
-                                <li>
                                     <a href="javascript:;" data-file="item" data-folder="portfolio" class="load-content">
                                 Portfolio Item
                             </a>

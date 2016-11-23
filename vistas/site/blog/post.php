@@ -6,7 +6,7 @@
                 <div class="col-md-8 col-sm-8">
                     <ul class="pull-right breadcrumb">
                         <li>
-                            <a href="index.html">
+                            <a href="javascript:;" data-file="index" data-folder="index" class="load-content">
                                 Home
                             </a>
                         </li>
@@ -48,7 +48,7 @@
                                 </div>
                                 <div class="post-content">
                                     <h2>
-                                        <a href="blog_post.html">
+                                        <a href="javascript:;" data-file="post" data-folder="blog" class="load-content">
                                             Class aptent taciti sociosqu ad litora torquent
                                         </a>
                                     </h2>
@@ -107,7 +107,7 @@
                                     <div class="post-media post-author">
                                         <h4><i class="fa fa-user"></i>Author</h4>
                                         <div class="img-thumbnail">
-                                            <a href="blog_post.html">
+                                            <a href="javascript:;" data-file="post" data-folder="blog" class="load-content">
                                                 <img alt="" src="<?=URL_PUBLIC?>frontend/images/avatar-1.jpg">
                                             </a>
                                         </div>

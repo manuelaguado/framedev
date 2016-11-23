@@ -52,32 +52,26 @@
 
     <!-- end: JAVASCRIPTS REQUIRED FOR THIS PAGE ONLY -->
     <script>
-		$(".load-content").click(function() {
-			$.ajax({
-				url: 'site/page/'+$(this).data('folder')+'/'+$(this).data('file'),
-				beforeSend: function( data ) {
-					$('#procesando').show();
-					$('#proceso_listo').hide();
-					$('#contenido_dinamico').empty();
-				},
-				success: function(data) {  
-					$('#contenido_dinamico').html(data);  
-				}  
-			});  
-		});
-		function load_content(folder,file){
-			$.ajax({
-				url: 'site/page/'+folder+'/'+file,
-				beforeSend: function( data ) {
-					$('#procesando').show();
-					$('#proceso_listo').hide();
-					$('#contenido_dinamico').empty();
-				},
-				success: function(data) {  
-					$('#contenido_dinamico').html(data);  
-				}  
-			}); 
-		}
+		var LinkD = function () {
+			return {
+				init: function () {
+					$(".load-content").click(function() {
+						$.ajax({
+							url: 'site/page/'+$(this).data('folder')+'/'+$(this).data('file'),
+							beforeSend: function( data ) {
+								$('#procesando').show();
+								$('#proceso_listo').hide();
+								$('#contenido_dinamico').empty();
+							},
+							success: function(data) {  
+								$('#contenido_dinamico').html(data);  
+							}  
+						});  
+					});
+				}
+			};
+		}();
+		
 		var StartNow = function () {
 			var loadContetIndex = function () {        
 				$.ajax({
@@ -100,5 +94,6 @@
 		jQuery(document).ready(function() {
 			StartNow.init();
 			Main.init();
+			LinkD.init();
 		});
     </script>

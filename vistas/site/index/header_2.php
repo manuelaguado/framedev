@@ -534,7 +534,7 @@
                                             <article>
                                                 <span><i class="fa fa-calendar"></i> January 11, 2014 </span>
                                                 <h4>
-                                                    <a href="blog_post.html">
+                                                    <a href="javascript:;" data-file="post" data-folder="blog" class="load-content">
                                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                                     </a>
                                                 </h4>
@@ -575,7 +575,7 @@
                                             <article>
                                                 <span><i class="fa fa-calendar"></i> January 11, 2014 </span>
                                                 <h4>
-                                                    <a href="blog_post.html">
+                                                    <a href="javascript:;" data-file="post" data-folder="blog" class="load-content">
                                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                                     </a>
                                                 </h4>
@@ -616,7 +616,7 @@
                                             <article>
                                                 <span><i class="fa fa-calendar"></i> January 11, 2014 </span>
                                                 <h4>
-                                                    <a href="blog_post.html">
+                                                    <a href="javascript:;" data-file="post" data-folder="blog" class="load-content">
                                                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                                     </a>
                                                 </h4>

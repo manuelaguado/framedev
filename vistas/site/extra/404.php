@@ -6,7 +6,7 @@
                 <div class="col-md-8 col-sm-8">
                     <ul class="pull-right breadcrumb">
                         <li>
-                            <a href="index.html">
+                            <a href="javascript:;" data-file="index" data-folder="index" class="load-content">
                                 Home
                             </a>
                         </li>
@@ -37,7 +37,7 @@
                                 <br> It may be temporarily unavailable, moved or no longer exist.
                                 <br> Check the URL you entered for any mistakes and try again.
                                 <br>
-                                <a href="index.html" class="btn btn-teal btn-return">
+                                <a href="javascript:;" data-file="index" data-folder="index" class="btn btn-teal btn-return load-content">
                                     Return home
                                 </a>
                                 <br> Still no luck?

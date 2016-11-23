@@ -6,7 +6,7 @@
                 <div class="col-md-8 col-sm-8">
                     <ul class="pull-right breadcrumb">
                         <li>
-                            <a href="javascript:;" onclick="load_content('index','index')" data-file="index" data-folder="index" class="load-content">
+                            <a href="javascript:;" data-file="index" data-folder="index" class="load-content">
                                 Home
                             </a>
                         </li>

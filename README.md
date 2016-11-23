@@ -29,9 +29,15 @@ FRAMEDEV es un marco de trabajo escrito en PHP que permite el rápido desarrollo
         -apt-get install php7.0-xml
         -apt-get install php7.0-gd
 
+##Configurar el servidor
+
+		Activar rewrite
+		Direccionar el server a la carpeta public
+
 ##Configuración de MySQL
 
         -nano /etc/mysql/mysql.conf.d/mysqld.cnf
+		Instalar la base de datos framedev.sql que se encuentra en la raiz
 
 poner al final:
 
@@ -77,5 +83,6 @@ Para mail via PEAR Mail:
 
 		- chmod -R 755 public/tmp/
 		- chmod -R 755 public/plugs/cache/
+		- chmod -R 755 uploads/perfiles/
 
 		
