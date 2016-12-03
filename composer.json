@@ -8,7 +8,10 @@
         }
     ],
     "require": {
+<<<<<<< HEAD
 		"manuelaguado/mysqldatatables": "dev-master",
+=======
+>>>>>>> 718ecd9dbdea0d8b4c90e567e9fe9477ec4908c4
 		"manuelaguado/mail_2_0": "dev-master",
 		"php-console/php-console": "^3.1",
 		"PHPOffice/PHPExcel": "1.8.1",
@@ -20,4 +23,8 @@
             "Framedev\\": "Framedev"
         }
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 718ecd9dbdea0d8b4c90e567e9fe9477ec4908c4
