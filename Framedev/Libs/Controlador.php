@@ -155,6 +155,7 @@ class Controlador extends Controller
 		if($requerido == true){
 			if(!isset($_SESSION['token'])){
 				Header("Location: ".URL_APP."site");
+				exit();
 			}else{
 				if(($_SESSION['tyc'] == 'SI')&&($_SESSION['pass_chge'] == 133)){
 					

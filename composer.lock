@@ -4,87 +4,9 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "394c2657f6575db0914605c9436d4ea0",
-    "content-hash": "91a76e364484cc6cda048e2a48cf445f",
+    "hash": "199c16cfcabcb936e850ad5f2852a88c",
+    "content-hash": "bf754d3014d1ecd569dd3f2a4c338853",
     "packages": [
-        {
-            "name": "manuelaguado/mail_2_0",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/manuelaguado/mail_2_0.git",
-                "reference": "95ae596bc7e45cdec0f0de7b3d848aba98ab7160"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/manuelaguado/mail_2_0/zipball/95ae596bc7e45cdec0f0de7b3d848aba98ab7160",
-                "reference": "95ae596bc7e45cdec0f0de7b3d848aba98ab7160",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0"
-            },
-            "type": "project",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Manuel Aguado",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Envío de mails con soporte para plantillas , librería para Framedev",
-            "homepage": "https://github.com/manuelaguado/mail_2_0",
-            "keywords": [
-                "MAIL",
-                "PEAR"
-            ],
-            "support": {
-                "issues": "https://github.com/manuelaguado/mail_2_0/issues",
-                "source": "https://github.com/manuelaguado/mail_2_0"
-            },
-            "time": "2016-11-18 22:05:50"
-        },
-        {
-            "name": "manuelaguado/mysqldatatables",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/manuelaguado/mysqldatatables.git",
-                "reference": "ba9b07d88e500689a9b5e9ab9edc5cbb483e8c86"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/manuelaguado/mysqldatatables/zipball/ba9b07d88e500689a9b5e9ab9edc5cbb483e8c86",
-                "reference": "ba9b07d88e500689a9b5e9ab9edc5cbb483e8c86",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0"
-            },
-            "type": "project",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Manuel Aguado",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Libreria para procesar tablas del lado del servidor",
-            "homepage": "https://github.com/manuelaguado/mysqldatatables",
-            "keywords": [
-                "Datatables",
-                "MySql"
-            ],
-            "support": {
-                "issues": "https://github.com/manuelaguado/mysqldatatables/issues",
-                "source": "https://github.com/manuelaguado/mysqldatatables"
-            },
-            "time": "2016-11-09 23:36:20"
-        },
         {
             "name": "mobiledetect/mobiledetectlib",
             "version": "2.8.24",
@@ -388,10 +310,7 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "manuelaguado/mysqldatatables": 20,
-        "manuelaguado/mail_2_0": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
