@@ -81,8 +81,22 @@ Para mail via PEAR Mail:
 			
 ##Permisos para carpetas
 
-		- chmod -R 755 public/tmp/
-		- chmod -R 755 public/plugs/cache/
-		- chmod -R 755 uploads/perfiles/
+		chown www-data:www-data temp/
+		chown www-data:www-data public/plugs/cache/
+		chown www-data:www-data uploads/perfiles/
+		chown www-data:www-data temp/
+
+## Rewrite en NginX
+	
+	location / {
+                root /var/www/html/public;
+                index  index.php;
+                if (!-f $request_filename) {
+                    rewrite ^/(.*)$ /index.php?url=$1 last;
+                }
+	}
+
+
+
 
 		
