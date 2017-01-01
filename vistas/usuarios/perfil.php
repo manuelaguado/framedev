@@ -34,7 +34,7 @@
                                         <!-- SIDEBAR USER TITLE -->
                                         <div class="profile-usertitle">
                                             <div class="profile-usertitle-name"> <?=$usuario_name?> </div>
-                                            <div class="profile-usertitle-job"> <?=utf8_encode(strtolower($credenciales_top['rol']))?> </div><br><br>
+                                            <div class="profile-usertitle-job"> <?=strtolower($credenciales_top['rol'])?> </div><br><br>
                                         </div>
                                         <!-- END SIDEBAR USER TITLE -->
                                     </div>

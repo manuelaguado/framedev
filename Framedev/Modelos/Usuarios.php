@@ -242,9 +242,9 @@ class UsuariosModel
 					$array['usuario'] 			= $row->usuario;
 					$array['correo' ]			= $row->correo;
 					$array['id_rol'] 			= $row->id_rol;
-					$array['nombres'] 			= utf8_encode($row->nombres);
-					$array['apellido_paterno'] 	= utf8_encode($row->apellido_paterno);
-					$array['apellido_materno'] 	= utf8_encode($row->apellido_materno);
+					$array['nombres'] 			= $row->nombres;
+					$array['apellido_paterno'] 	= $row->apellido_paterno;
+					$array['apellido_materno'] 	= $row->apellido_materno;
 					$array['id_ubicacion'] 		= $row->id_ubicacion;
 					$array['password'] 			= $row->password;
 					$array['cat_pass_chge'] 	= $row->cat_pass_chge;
@@ -606,7 +606,7 @@ class acciones_login extends SSP{
 					
 					$row[ $column['dt'] ] = $salida;
 				}else{
-					$row[ $column['dt'] ] = ( self::detectUTF8($data[$i][$name_column]) )? $data[$i][$name_column] : utf8_encode($data[$i][$name_column]);	
+					$row[ $column['dt'] ] = $data[$i][$name_column];	
 				}
 			}
 			$out[] = $row;

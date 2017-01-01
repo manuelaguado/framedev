@@ -29,8 +29,8 @@
                                 <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
                                     <img id="avatar_top" alt="" class="img-circle" src="plugs/timthumb.php?src=<?=$avatar_usr_circ?>&w=32&h=32&a=t" />
                                     <span class="username username-hide-on-mobile"> 
-										<div id="name_top" tooltip="<?=utf8_encode(strtolower($credenciales_top['rol']))?>"><?=$usuario_name?></div>
-										<!--<span style="font-variant: small-caps; font-size:1em;"><?=utf8_encode(strtolower($credenciales_top['rol']))?></span>-->
+										<div id="name_top" tooltip="<?=strtolower($credenciales_top['rol'])?>"><?=$usuario_name?></div>
+										<!--<span style="font-variant: small-caps; font-size:1em;"><?=strtolower($credenciales_top['rol'])?></span>-->
 									</span>
                                     <i class="fa fa-angle-down"></i>
                                 </a>

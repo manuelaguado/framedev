@@ -1,16 +1,16 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : Sinergia
-Source Server Version : 50712
+Source Server         : LEMP VBOX
+Source Server Version : 50716
 Source Host           : localhost:3306
-Source Database       : sinergia
+Source Database       : framedev
 
 Target Server Type    : MYSQL
-Target Server Version : 50712
+Target Server Version : 50716
 File Encoding         : 65001
 
-Date: 2016-11-19 21:42:29
+Date: 2017-01-01 12:01:15
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -34,7 +34,7 @@ CREATE TABLE `cm_catalogo` (
   PRIMARY KEY (`id_cat`),
   KEY `fk_cm_catalogo_cm_catalogo_1` (`id_padre`) USING BTREE,
   CONSTRAINT `fk_cm_catalogo_cm_catalogo_1` FOREIGN KEY (`id_padre`) REFERENCES `cm_catalogo` (`id_cat`)
-) ENGINE=InnoDB AUTO_INCREMENT=134 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB AUTO_INCREMENT=134 DEFAULT CHARSET=utf8mb4 ROW_FORMAT=COMPACT;
 
 -- ----------------------------
 -- Records of cm_catalogo
@@ -69,7 +69,7 @@ CREATE TABLE `fw_area` (
   KEY `fk_area_ae_catalogo_1` (`cat_status`) USING BTREE,
   CONSTRAINT `fk_area_ae_catalogo_1` FOREIGN KEY (`cat_status`) REFERENCES `cm_catalogo` (`id_cat`),
   CONSTRAINT `fk_area_ubicacion_1` FOREIGN KEY (`id_ubicacion`) REFERENCES `fw_ubicacion` (`id_ubicacion`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ROW_FORMAT=COMPACT;
 
 -- ----------------------------
 -- Records of fw_area
@@ -91,12 +91,12 @@ CREATE TABLE `fw_config` (
   `fecha_alta` datetime DEFAULT NULL,
   `fecha_mod` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id_config`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 ROW_FORMAT=COMPACT;
 
 -- ----------------------------
 -- Records of fw_config
 -- ----------------------------
-INSERT INTO `fw_config` VALUES ('1', '1', 'login_permitido', '1', '0', '0', '1', '1', '2016-05-28 21:15:57', '2016-11-17 21:59:09');
+INSERT INTO `fw_config` VALUES ('1', '1', 'login_permitido', '1', '0', '0', '1', '1', '2016-05-28 21:15:57', '2016-12-21 03:16:08');
 
 -- ----------------------------
 -- Table structure for fw_login
@@ -120,7 +120,7 @@ CREATE TABLE `fw_login` (
   PRIMARY KEY (`id_login`),
   KEY `fk_fw_login_fw_usuarios_1` (`id_usuario`) USING BTREE,
   CONSTRAINT `fk_fw_login_fw_usuarios_1` FOREIGN KEY (`id_usuario`) REFERENCES `fw_usuarios` (`id_usuario`)
-) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of fw_login
@@ -144,7 +144,9 @@ INSERT INTO `fw_login` VALUES ('16', '1', 'idrja2dlc4h8qt4bra4rn6up15', '0', '20
 INSERT INTO `fw_login` VALUES ('17', '1', '3s3btddf5ffvumcrp8vra58ag4', '0', '2016-11-19 08:16:57', '2016-11-19 08:17:01', '2016-11-19 08:17:01', '0000-00-00 00:00:04', '172.20.8.11', 'ac14::08b::/48', '1', '1', '2016-11-19 08:16:57', '2016-11-19 08:17:01');
 INSERT INTO `fw_login` VALUES ('18', '1', '3s3btddf5ffvumcrp8vra58ag4', '0', '2016-11-19 09:43:51', '2016-11-19 09:44:10', '2016-11-19 09:44:10', '0000-00-00 00:00:19', '172.20.8.11', 'ac14::08b::/48', '1', '1', '2016-11-19 09:43:51', '2016-11-19 09:44:10');
 INSERT INTO `fw_login` VALUES ('19', '1', '3s3btddf5ffvumcrp8vra58ag4', '0', '2016-11-19 15:07:12', '2016-11-19 15:08:33', '2016-11-19 15:08:33', '0000-00-00 00:01:21', '172.20.8.11', 'ac14::08b::/48', '1', '1', '2016-11-19 15:07:12', '2016-11-19 15:08:33');
-INSERT INTO `fw_login` VALUES ('20', '1', 'ohubce2n15re4kghp9ldktae44', '1', '2016-11-19 21:31:38', '2016-11-19 21:42:20', null, null, '172.20.8.11', 'ac14::08b::/48', '1', null, '2016-11-19 21:31:38', '2016-11-19 21:42:20');
+INSERT INTO `fw_login` VALUES ('20', '1', 'ohubce2n15re4kghp9ldktae44', '0', '2016-11-19 21:31:38', '2016-11-19 21:42:20', '2016-12-12 11:49:49', '0000-00-22 14:18:11', '172.20.8.11', 'ac14::08b::/48', '1', '1', '2016-11-19 21:31:38', '2016-12-12 11:49:49');
+INSERT INTO `fw_login` VALUES ('21', '1', 'uvfu6firup8414uflmlaqr4aa0', '0', '2016-12-12 11:49:50', '2016-12-12 12:03:14', '2016-12-21 03:15:50', '0000-00-08 15:26:00', '172.20.8.11', 'ac14::08b::/48', '1', '1', '2016-12-12 11:49:50', '2016-12-21 03:15:50');
+INSERT INTO `fw_login` VALUES ('22', '1', '24a343vr9j16736cotr19i2jf6', '0', '2016-12-21 03:15:50', '2016-12-21 03:16:53', '2016-12-21 03:16:53', '0000-00-00 00:01:03', '172.20.8.11', 'ac14::08b::/48', '1', '1', '2016-12-21 03:15:50', '2016-12-21 03:16:53');
 
 -- ----------------------------
 -- Table structure for fw_login_log
@@ -159,7 +161,7 @@ CREATE TABLE `fw_login_log` (
   PRIMARY KEY (`id_login_log`),
   KEY `fk_login_log_usuarios_1` (`id_usuario`) USING BTREE,
   CONSTRAINT `fk_fw_login_log_fw_usuarios_1` FOREIGN KEY (`id_usuario`) REFERENCES `fw_usuarios` (`id_usuario`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of fw_login_log
@@ -185,7 +187,7 @@ CREATE TABLE `fw_lost_password` (
   KEY `fk_lost_password_ae_catalogo_1` (`cat_status`) USING BTREE,
   CONSTRAINT `fk_lost_password_ae_catalogo_1` FOREIGN KEY (`cat_status`) REFERENCES `cm_catalogo` (`id_cat`),
   CONSTRAINT `fk_lost_password_usuarios_1` FOREIGN KEY (`id_usuario`) REFERENCES `fw_usuarios` (`id_usuario`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 ROW_FORMAT=COMPACT;
 
 -- ----------------------------
 -- Records of fw_lost_password
@@ -207,7 +209,7 @@ CREATE TABLE `fw_metodos` (
   `fecha_alta` datetime DEFAULT NULL,
   `fecha_mod` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id_metodo`)
-) ENGINE=InnoDB AUTO_INCREMENT=142 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB AUTO_INCREMENT=142 DEFAULT CHARSET=utf8mb4 ROW_FORMAT=COMPACT;
 
 -- ----------------------------
 -- Records of fw_metodos
@@ -243,16 +245,16 @@ INSERT INTO `fw_metodos` VALUES ('32', 'Usuarios', 'perfil', 'Modificar Perfil',
 INSERT INTO `fw_metodos` VALUES ('33', 'Usuarios', 'editar_perfil', 'Actualiza el perfil', 'Envia la solicitud de actualizacion de perfil al modelo.', '0', '0', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
 INSERT INTO `fw_metodos` VALUES ('34', 'Usuarios', 'upload_avatar', 'Subir o cambiar avatar', 'Establece el avatar para el usuario, de manera predeterminada el usuario tiene un avatar generico, que se puede cambiar con esta opcion, tambien establece los permisos para tres funciones estaticas complementarias y relacionadas a esta funcion.', '0', '0', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
 INSERT INTO `fw_metodos` VALUES ('35', 'Sidebar', 'obtenerExtensiones', 'Obtener extensiones con controladores y metodos', 'Obtiene un arreglo con las extensiones sus controladores y metodos de acuerdo a los permisos asignados para los usuarios, es necesario para renderear el menu lateral o sidebar, y deberia de estar disponible para todos los usuarios que tienen acceso a las ', '0', '0', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
-INSERT INTO `fw_metodos` VALUES ('106', 'Pdf', 'resguardo_telefonico', 'Resguardo telefÃ³nico', 'Permite descargar el formato de resguardo telefÃ³nico', '1', null, '2016-03-17 01:50:59', '2016-03-17 08:50:59');
-INSERT INTO `fw_metodos` VALUES ('125', 'Usuarios', 'logueados', 'Logueados', 'Muestra los usuarios que tienen una sessiÃ³n abierta actual', '1', null, '2016-04-13 13:56:42', '2016-04-13 19:56:42');
+INSERT INTO `fw_metodos` VALUES ('106', 'Pdf', 'resguardo_telefonico', 'Resguardo telefónico', 'Permite descargar el formato de resguardo telefónico', '1', null, '2016-03-17 01:50:59', '2016-03-17 08:50:59');
+INSERT INTO `fw_metodos` VALUES ('125', 'Usuarios', 'logueados', 'Logueados', 'Muestra los usuarios que tienen una sessión abierta actual', '1', null, '2016-04-13 13:56:42', '2016-04-13 19:56:42');
 INSERT INTO `fw_metodos` VALUES ('126', 'Login', 'force_sign_out', 'Forzar Deslogueo del sistema', 'Forza la salida del usuario deslogueandolo del sistema', '1', null, '2016-04-13 18:54:04', '2016-04-14 00:54:04');
 INSERT INTO `fw_metodos` VALUES ('128', 'Login', 'force_all_sign_out', 'Forzar el deslogueo glabal', 'Elimina las sesiones de todos los usuarios y provoca una nueva solicitud de logueo', '1', null, '2016-05-09 18:05:18', '2016-05-10 00:05:18');
 INSERT INTO `fw_metodos` VALUES ('129', 'Login', 'switch_login_op', 'Deshabilita y habilita el logueo de los peradores', 'Permite permutar entre permitir el logueo y des habilitar el logueo de los operadores', '1', '1', '2016-05-10 02:24:20', '2016-05-28 22:46:48');
 INSERT INTO `fw_metodos` VALUES ('137', 'Catalogo', 'index', 'Indice', 'Lista el catalogo de claves ', '1', null, '2016-06-17 18:29:49', '2016-06-17 18:29:49');
-INSERT INTO `fw_metodos` VALUES ('138', 'Catalogo', 'editar_catalogo', 'Edita los elementos del catalogo', 'Muestra un a modal que permite la ediciÃ³n de un elemento del catalogo seleccionado', '1', '1', '2016-06-17 18:52:32', '2016-06-17 19:01:26');
+INSERT INTO `fw_metodos` VALUES ('138', 'Catalogo', 'editar_catalogo', 'Edita los elementos del catalogo', 'Muestra un a modal que permite la edición de un elemento del catalogo seleccionado', '1', '1', '2016-06-17 18:52:32', '2016-06-17 19:01:26');
 INSERT INTO `fw_metodos` VALUES ('139', 'Catalogo', 'eliminar_elemento', 'Eliminar elemento de catalogo', 'Permite eliminar un elemento del catalogo', '1', null, '2016-06-17 23:46:29', '2016-06-17 23:46:29');
 INSERT INTO `fw_metodos` VALUES ('140', 'Catalogo', 'add_elemento', 'Agrega un nuevo elemento', 'Agrega un nuevo elemento al catalogo', '1', null, '2016-06-18 00:19:02', '2016-06-18 00:19:02');
-INSERT INTO `fw_metodos` VALUES ('141', 'Mobile', 'index', 'Acceso desde el mobil', 'pÃ¡gina inicial de acceso desde el mÃ³vil', '1', null, '2016-11-14 22:01:13', '2016-11-14 22:01:13');
+INSERT INTO `fw_metodos` VALUES ('141', 'Mobile', 'index', 'Acceso desde el mobil', 'página inicial de acceso desde el móvil', '1', null, '2016-11-14 22:01:13', '2016-11-14 22:01:13');
 
 -- ----------------------------
 -- Table structure for fw_nivel
@@ -279,7 +281,7 @@ CREATE TABLE `fw_nivel` (
   `fecha_mod` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id_nivel`),
   KEY `fk_nivel_area_1` (`id_origen`) USING BTREE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ROW_FORMAT=COMPACT;
 
 -- ----------------------------
 -- Records of fw_nivel
@@ -302,13 +304,12 @@ CREATE TABLE `fw_permisos` (
   KEY `fk_permisos_metodos_1` (`id_metodo`) USING BTREE,
   CONSTRAINT `fk_permisos_metodos_1` FOREIGN KEY (`id_metodo`) REFERENCES `fw_metodos` (`id_metodo`),
   CONSTRAINT `fk_permisos_roles_1` FOREIGN KEY (`id_rol`) REFERENCES `fw_roles` (`id_rol`)
-) ENGINE=InnoDB AUTO_INCREMENT=49 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB AUTO_INCREMENT=50 DEFAULT CHARSET=utf8mb4 ROW_FORMAT=COMPACT;
 
 -- ----------------------------
 -- Records of fw_permisos
 -- ----------------------------
 INSERT INTO `fw_permisos` VALUES ('1', '1', '1', '1', null, '2016-11-09 07:27:15', '2016-11-09 07:27:15');
-INSERT INTO `fw_permisos` VALUES ('2', '2', '1', '1', null, '2016-11-09 07:27:16', '2016-11-09 07:27:16');
 INSERT INTO `fw_permisos` VALUES ('3', '137', '1', '1', null, '2016-11-09 07:27:16', '2016-11-09 07:27:16');
 INSERT INTO `fw_permisos` VALUES ('4', '138', '1', '1', null, '2016-11-09 07:27:17', '2016-11-09 07:27:17');
 INSERT INTO `fw_permisos` VALUES ('5', '139', '1', '1', null, '2016-11-09 07:27:18', '2016-11-09 07:27:18');
@@ -348,6 +349,7 @@ INSERT INTO `fw_permisos` VALUES ('43', '34', '1', '1', null, '2016-11-09 07:28:
 INSERT INTO `fw_permisos` VALUES ('46', '125', '1', '1', null, '2016-11-12 00:36:36', '2016-11-12 00:36:36');
 INSERT INTO `fw_permisos` VALUES ('47', '33', '1', '1', null, '2016-11-12 00:44:10', '2016-11-12 00:44:10');
 INSERT INTO `fw_permisos` VALUES ('48', '141', '1', '1', null, '2016-11-14 22:01:30', '2016-11-14 22:01:30');
+INSERT INTO `fw_permisos` VALUES ('49', '2', '1', '1', null, '2016-12-12 12:01:34', '2016-12-12 12:01:34');
 
 -- ----------------------------
 -- Table structure for fw_roles
@@ -364,7 +366,7 @@ CREATE TABLE `fw_roles` (
   PRIMARY KEY (`id_rol`),
   KEY `fk_fw_roles_cm_catalogo_1` (`cat_tiporol`) USING BTREE,
   CONSTRAINT `fk_fw_roles_cm_catalogo_1` FOREIGN KEY (`cat_tiporol`) REFERENCES `cm_catalogo` (`id_cat`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 ROW_FORMAT=COMPACT;
 
 -- ----------------------------
 -- Records of fw_roles
@@ -386,7 +388,7 @@ CREATE TABLE `fw_roles_alta` (
   PRIMARY KEY (`id_rol_alta`),
   KEY `fk_fw_roles_alta_fw_roles_1` (`id_rol`) USING BTREE,
   CONSTRAINT `fk_fw_roles_alta_fw_roles_1` FOREIGN KEY (`id_rol`) REFERENCES `fw_roles` (`id_rol`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 ROW_FORMAT=COMPACT;
 
 -- ----------------------------
 -- Records of fw_roles_alta
@@ -409,7 +411,7 @@ CREATE TABLE `fw_ubicacion` (
   PRIMARY KEY (`id_ubicacion`),
   KEY `fk_ubicacion_ae_catalogo_1` (`cat_tipo_ubicacion`) USING BTREE,
   CONSTRAINT `fk_ubicacion_ae_catalogo_1` FOREIGN KEY (`cat_tipo_ubicacion`) REFERENCES `cm_catalogo` (`id_cat`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 ROW_FORMAT=COMPACT;
 
 -- ----------------------------
 -- Records of fw_ubicacion
@@ -446,12 +448,12 @@ CREATE TABLE `fw_usuarios` (
   CONSTRAINT `fk_usuarios_area_1` FOREIGN KEY (`id_area`) REFERENCES `fw_area` (`id_area`),
   CONSTRAINT `fk_usuarios_roles_1` FOREIGN KEY (`id_rol`) REFERENCES `fw_roles` (`id_rol`),
   CONSTRAINT `fk_usuarios_ubicacion_1` FOREIGN KEY (`id_ubicacion`) REFERENCES `fw_ubicacion` (`id_ubicacion`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 ROW_FORMAT=COMPACT;
 
 -- ----------------------------
 -- Records of fw_usuarios
 -- ----------------------------
-INSERT INTO `fw_usuarios` VALUES ('1', null, '21232f297a57a5a743894a0e4a801fc3', 'admin', 'framedev@gmail.com', '1', 'Manuel Emiliano', 'Aguado', 'Meza', '1', '133', '3', '1', '1', '0000-00-00 00:00:00', '2016-11-19 21:32:23');
+INSERT INTO `fw_usuarios` VALUES ('1', null, '21232f297a57a5a743894a0e4a801fc3', 'admin', 'framedev@gmail.com', '1', 'Manuel Emiliano', 'Aguado', 'Meza', '1', '133', '3', '1', '1', '0000-00-00 00:00:00', '2016-12-12 12:01:03');
 
 -- ----------------------------
 -- Table structure for fw_usuarios_config
@@ -472,10 +474,10 @@ CREATE TABLE `fw_usuarios_config` (
   PRIMARY KEY (`id_usuario_config`),
   KEY `fk_usuarios_config_usuarios_1` (`id_usuario`) USING BTREE,
   CONSTRAINT `fk_usuarios_config_usuarios_1` FOREIGN KEY (`id_usuario`) REFERENCES `fw_usuarios` (`id_usuario`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 ROW_FORMAT=COMPACT;
 
 -- ----------------------------
 -- Records of fw_usuarios_config
 -- ----------------------------
-INSERT INTO `fw_usuarios_config` VALUES ('1', '1', 'fv5mLD.jpg', '0', '0', 'SI', '0000-00-00', '1', '1', '2016-02-08 13:59:40', '2016-11-18 21:55:04');
+INSERT INTO `fw_usuarios_config` VALUES ('1', '1', 'FwTsBn.jpg', '0', '0', 'SI', '0000-00-00', '1', '1', '2016-02-08 13:59:40', '2016-12-12 11:57:04');
 SET FOREIGN_KEY_CHECKS=1;
