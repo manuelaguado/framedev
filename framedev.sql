@@ -156,7 +156,7 @@ CREATE TABLE `fw_login_log` (
   `id_login_log` int(32) unsigned NOT NULL AUTO_INCREMENT,
   `id_usuario` int(32) unsigned DEFAULT NULL,
   `ip` varchar(15) DEFAULT NULL,
-  `fecha` datetime DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  `fecha` datetime DEFAULT NULL,
   `intentos` varchar(3) DEFAULT NULL,
   PRIMARY KEY (`id_login_log`),
   KEY `fk_login_log_usuarios_1` (`id_usuario`) USING BTREE,
